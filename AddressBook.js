@@ -178,3 +178,37 @@ function deleteContact() {
 }
 
 deleteContact();
+
+function numberOfContact() {
+    let totalCount =  addressBookArray.reduce(((totalCount) => { totalCount +=1; return totalCount; }), 0);
+    console.log("Total Number of Contacts in AddressBook : " +totalCount);
+}
+
+numberOfContact();
+function duplicateEntry() {
+    let userInput = prompt("Enter name to check Entry in addressbook : ");
+    addressBookArray.forEach(addressBook => {
+        if(addressBook.firstName == userInput) {
+            console.log("Contact already exists in the book");
+        } else {
+            console.log("Contact not exists in the book");
+        }
+});
+}
+duplicateEntry();
+
+
+function searchbyCityOrState() {
+    let inputCity = prompt("Enter city to search person : ");
+    let inputState = prompt("Enter state to search person : ");
+    addressBookArray.forEach(addressBook => {
+        if(addressBook.city == inputCity || addressBook.state == inputState) {
+            console.log("Person in city " +inputCity+ " and state " +inputState);
+        }
+    });
+    addressBookArray.filter(contact => contact.city == inputCity)
+    addressBookArray.filter(contact => contact.city == inputCity)
+    addressBookArray.forEach(contact => console.log(addressBookArray));
+}
+
+searchbyCityOrState();
