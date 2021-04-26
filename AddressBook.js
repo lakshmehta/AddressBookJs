@@ -117,3 +117,8 @@ try {
 } catch (e) {
     console.error(e);
 }
+let addressBook2 = new AddressBook("Jignesh", "Tambade", "Saigaon", "Raigad", "Maharashtra", 435657, 9028363759,"jignesht5555@Sgmail.com",);
+let addressBookArray= new Array();
+addressBookArray.push(addressBook1);
+addressBookArray.push(addressBook2);
+console.log("\nNew Contact Added to Array " +addressBookArray);
